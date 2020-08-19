@@ -1,0 +1,2194 @@
+{
+	"info": {
+		"_postman_id": "236bdf13-8da5-4d40-b6bd-fafc2d490a5f",
+		"name": "Limfinity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Samples",
+			"item": [
+				{
+					"name": "Subject Details (Sample)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subject_details",
+									"type": "text"
+								},
+								{
+									"key": "subject_id",
+									"value": "118014",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rfid_tag",
+									"value": "355AB1CBC00000400001CCFE",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "NJB_TEST_5_C10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_id",
+									"value": "119603",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rfid_tag",
+									"value": "355AB1CBC00000400001D333",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99010934-H06",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_id",
+									"value": "119599",
+									"description": "RNA-PCR",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rfid_tag",
+									"value": "355AB1CBC00000400001D32F",
+									"description": "RNA-PCR",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99010934-H24",
+									"description": "RNA-PCR",
+									"type": "text"
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99010834_D12",
+									"description": "RNA",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99010434_D12",
+									"description": "Viral Prep",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "ZZA01340492",
+									"description": "Swab",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects Search (Samples by Plate)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "search_subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "query",
+									"value": "Plate = 'SGF_TEST_9'",
+									"type": "text"
+								},
+								{
+									"key": "query",
+									"value": "Plate = '99060027'",
+									"description": "or by UID e.g. 1076",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_fields",
+									"value": "'Plate'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "384",
+									"description": "Use 384 as limit which covers 96 or 384 well plates",
+									"type": "text"
+								},
+								{
+									"key": "sort",
+									"value": "Index",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "search_mode",
+									"value": "ADVANCED",
+									"description": "REGULAR, ADVANCED",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects Search (Sample by ID)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "search_subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='ZZB00000067'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='ZZA01340492'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='CP1-00000121' ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "name = 'CP1-00000121'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='CP1-00000121' OR name = 'CP1-00000121'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "name = 'NJB_TEST_1_A10'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='HEA10001294'",
+									"description": "TWE00022923, HEA10001294",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "name = '001102814_A05'",
+									"description": "001115178_C02, 001102814_A05",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "id=61849",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "id=2841",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Parent Sample\" = 'ZZA03130495'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "rfid_tag = '355AB1CBC00000400000F199'",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects Search (Sample by ID) TEST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "search_subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "search_mode",
+									"value": "REGULAR",
+									"description": "DEEP or REGULAR",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='ZZB00000067'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='ZZA01340492'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='CP1-00000121' ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "name = 'CP1-00000121'",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "\"Root Sample\"='CP1-00000121' OR name = 'CP1-00000121'",
+									"type": "text"
+								},
+								{
+									"key": "fields",
+									"value": "Plate",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "conditions",
+									"value": "contains",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "values",
+									"value": "PP",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_fields",
+									"value": "Plate, Index",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Subjects (**Create Samples**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Sample\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"Name\": \"ABC002\",\r\n     \t\"BARCODE\": \"ABC002\",\r\n    \t\"Sample Type\": \"Swab\"\r\n    },\r\n    {\r\n\t\t\"Name\": \"NJB_TEST_1_A02\",\r\n     \t\"BARCODE\": \"NJB_TEST_1_A02\",\r\n\t\t\"Sample Type\": \"Viral Prep\",\r\n\t\t\"Parent Sample\": \"ABC002\",\r\n  \t\t\"Plate\": \"NJB_TEST_1\",\r\n  \t\t\"Index\": 1\r\n  }]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Subjects (**Create Controls**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Sample\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"Name\": \"NEC_NJB_TEST_1_B01\",\r\n     \t\"BARCODE\": \"NEC_NJB_TEST_1_B01\",\r\n    \t\"Sample Type\": \"NTC\",\r\n        \"Parent Sample\": \"NTC\",\r\n        \"Plate\": \"NJB_TEST_1\",\r\n        \"Index\": 12\r\n    },\r\n    {\r\n     \t\"Name\": \"NEC_NJB_TEST_1_C01\",\r\n     \t\"BARCODE\": \"NEC_NJB_TEST_1_C01\",\r\n    \t\"Sample Type\": \"NEC\",\r\n        \"Parent Sample\": \"NEC\",\r\n        \"Plate\": \"NJB_TEST_1\",\r\n        \"Index\": 24\r\n    }]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (Sample)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "subject_names",
+									"value": "99030006_A12",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_ids",
+									"value": "96457",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_names",
+									"value": "99010934-H24",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_ids",
+									"value": "119599",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dir",
+									"value": "ASC",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedigree Data (Sample) *NOT WORKING *",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "get_pedigree_data",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Sample",
+									"type": "text"
+								},
+								{
+									"key": "subject_id",
+									"value": "61849",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Delete Sample**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"delete_subject\",\r\n  \"id\": \"93126\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Plates",
+			"item": [
+				{
+					"name": "Subjects (**Terminate Plates**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Plate\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"BARCODE\": \"99060835_pcr2\",\r\n    \t\"Terminated\": true\r\n    }]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Terminate Samples**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"description": "\"Last RNA-PCR Sample\": \"99060835_pcr3-A23\"\n",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Sample\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"BARCODE\": \"ZZA06350489\",\r\n    \t\"Last RNA-PCR Sample\": \"SGW-INC150-TEST2-A23\"\r\n    }\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subject Details (Plate)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subject_details",
+									"type": "text"
+								},
+								{
+									"key": "subject_id",
+									"value": "93125",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "NJB_TEST_1",
+									"description": "terminated = true",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "NJB_TEST_1",
+									"description": "terminated = false",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99030006",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rfid_tag",
+									"value": "355AB1CBC00000400000F25D",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_name",
+									"value": "99030006",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "barcode_tag",
+									"value": "99060835_pcr2",
+									"type": "text"
+								},
+								{
+									"key": "subject_id",
+									"value": "109218",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (Plate)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Plate",
+									"description": "’value/text’ = Limits the search to all subjects of a specific type(can use subject type, name or specific ID).",
+									"type": "text"
+								},
+								{
+									"key": "subject_ids",
+									"value": "62235 * NOT WORKING* ",
+									"description": "* NOT WORKING* ’value,value’ = Limits subjects to a list of item specific IDs.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_names",
+									"value": "99030006 * NOT WORKING* ",
+									"description": "* NOT WORKING* ’text,text’ = Limits subjects to a list of item specific names.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "id=62235",
+									"description": "’text’ = Displays a list of subjects containing a specific text string.\n",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "62235",
+									"description": "’value’ = The item specific ID to start the list with.\n",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"description": "'value' = The total number of results to retrieve.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"description": "'text' = Sort the displayed results by a specific identifier such as subject_type, subject_name, etc.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dir",
+									"value": "DESC",
+									"description": "'ASC/DESC' = Sort the displayed results in ascending or descending order.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_fields",
+									"value": "Plate Type",
+									"description": "'text' #commadelimited list of User Defined fields to retrieve for subjects ",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Update Plates**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Plate\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"UID\": \"93110\",\r\n     \t\"Name\": \"SGF_TEST_1\",\r\n    \t\"Plate Type\": \"Viral Prep Plate\",\r\n    \t\"NTC Positions Used\": \"F01\",\r\n    \t\"PCT Positions Used\": \"F02\"\r\n    },\r\n    {\r\n\t\t\"UID\": \"93109\",\r\n\t\t\"Name\": \"SGF_TEST_1\",\r\n\t\t\"Plate Type\": \"Viral Prep Plate\",\r\n  \t\t\"NTC Positions Used\": \"H01\"\r\n  }]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Update Plate**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Plate\",\r\n  \"json\": {\r\n     \t\"UID\": \"93121\",\r\n     \t\"BARCODE\": \"NJB_TEST_1\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Create Plate**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Plate\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"Name\": \"NJB_TEST_1\",\r\n     \t\"BARCODE\": \"NJB_TEST_1\",\r\n    \t\"Plate Type\": \"Viral Prep Plate\",\r\n  \t\t\"PCT Positions Used\": \"A01\",\r\n  \t\t\"NTC Positions Used\": \"B01\",\r\n  \t\t\"NEC Positions Used\": \"C01\"\r\n    }]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Delete Plate**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"delete_subject\",\r\n  \"id\": \"93122\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reagents",
+			"item": [
+				{
+					"name": "Subjects (Reagents)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Reagent",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Import Files",
+			"item": [
+				{
+					"name": "Subject Details (Import File)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subject_details",
+									"type": "text"
+								},
+								{
+									"key": "subject_id",
+									"value": "92097",
+									"type": "text"
+								},
+								{
+									"key": "barcode_tag",
+									"value": "L04105416",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rfid_tag",
+									"value": "355AB1CBC00000400000F25D",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_name",
+									"value": "99030006",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (Import File)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "DataImport",
+									"description": "’value/text’ = Limits the search to all subjects of a specific type(can use subject type, name or specific ID).",
+									"type": "text"
+								},
+								{
+									"key": "subject_ids",
+									"value": "62235 * NOT WORKING* ",
+									"description": "* NOT WORKING* ’value,value’ = Limits subjects to a list of item specific IDs.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subject_names",
+									"value": "99030006 * NOT WORKING* ",
+									"description": "* NOT WORKING* ’text,text’ = Limits subjects to a list of item specific names.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "id=1700",
+									"description": "’text’ = Displays a list of subjects containing a specific text string.\n",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "62235",
+									"description": "’value’ = The item specific ID to start the list with.\n",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"description": "'value' = The total number of results to retrieve.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"description": "'text' = Sort the displayed results by a specific identifier such as subject_type, subject_name, etc.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dir",
+									"value": "DESC",
+									"description": "'ASC/DESC' = Sort the displayed results in ascending or descending order.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user_fields",
+									"value": "Plate Type",
+									"description": "'text' #commadelimited list of User Defined fields to retrieve for subjects ",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attachment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host}}/udf/attachment?obj_type=Subject&obj_id=92097&pid=20&t=1589387529",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"udf",
+								"attachment"
+							],
+							"query": [
+								{
+									"key": "obj_type",
+									"value": "Subject"
+								},
+								{
+									"key": "obj_id",
+									"value": "92097",
+									"description": "Subject UID"
+								},
+								{
+									"key": "pid",
+									"value": "20",
+									"description": "ID of the UDF"
+								},
+								{
+									"key": "t",
+									"value": "1589387529",
+									"description": "Unix Epoch time of the Last Updated Date"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Configurations",
+			"item": [
+				{
+					"name": "Subjects (Configurations)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "subjects",
+									"type": "text"
+								},
+								{
+									"key": "subject_type",
+									"value": "Configuration",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Settings And Preferences",
+			"item": [
+				{
+					"name": "Limfinity Settings",
+					"item": [
+						{
+							"name": "Subject Types",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": "{{auth_token}}",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "subject_types",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "1000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{host}}/api",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Subject Groups",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": "{{auth_token}}",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "subject_groups",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{host}}/api",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User-Defined Fields",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "auth_token",
+											"value": "{{auth_token}}",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "userfields",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "1000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{host}}/api",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "users",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "243",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "query",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "dir",
+									"value": "DESC",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User  by Name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "users",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Groups",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "user_groups",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Roles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "roles",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "audit",
+									"type": "text"
+								},
+								{
+									"key": "date_flag",
+									"value": "",
+									"description": "'all/today/yesterday/week/month’ = Displays audit records made today, yesterday, this week, or this month.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "date_range",
+									"value": "",
+									"description": "’date_from,date_to’ = Displays audit records made within a specific date range(format: mm/dd/yyyy).",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subj_ids",
+									"value": "",
+									"description": "’value,value’ = Displays audits records of a specific range of subjects.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start",
+									"value": "",
+									"description": "’value’ = The item specific ID to start the list with.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "100",
+									"description": "'value' = The total number of items to retrieve.",
+									"type": "text"
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"description": "'text' = Sort the displayed results by a specific field such as subject_type, subject_name, etc.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dir",
+									"value": "",
+									"description": "'ASC/DESC' = Sort the displayed results in ascending or descending order.",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Run Scripts",
+			"item": [
+				{
+					"name": "Run Script GetSampleDispositions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ApiScript::GetSampleDispositions",
+									"description": "ApiScript::GetSampleDispositions",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99060835_pcr2\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99060900\"}",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010989\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010934\"}",
+									"description": "99010931",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"000666001_pcr\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99070509\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010991\"}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api/run_script",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"run_script"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Run Script SetPcrSampleReferences",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{auth_token}}",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ApiScript::SetPcrSampleReferences",
+									"description": "ApiScript::GetSampleDispositions",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"003101747\", \"update\": false}",
+									"description": "*** LIIVE PLATE ***",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"003101748\", \"update\": false}",
+									"description": "*** LIIVE PLATE ***",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"003101387\", \"update\": false}",
+									"description": "*** LIIVE PLATE ***",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"003101229\", \"update\": false}",
+									"description": "*** LIIVE PLATE ***",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"003101545\", \"update\": false}",
+									"description": "*** LIIVE PLATE ***",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99060900\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010989\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010991\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99060835_pcr2\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"SGW-INC150-TEST2\" , \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99010934\", \"update\": false}",
+									"description": "99010931",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"000666001_pcr\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "{\"plate_name\": \"99070509\", \"update\": false}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/api/run_script",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"run_script"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subjects (**Set Last RNA-PCR Sample**)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"description": "\"Last RNA-PCR Sample\": \"99060835_pcr3-A23\"\n",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{username}}\",\r\n  \"auth_token\":\"{{auth_token}}\",\r\n  \"method\":\"import_subjects\",\r\n  \"subject_type\":\"Sample\",\r\n  \"json\": [\r\n  \t{\r\n     \t\"BARCODE\": \"ZZA06350489\",\r\n\t  \t\"Last RNA-PCR Sample\": \"99060835_pcr3-A23\"\r\n    }\r\n\t]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/api",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "gen_token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{host}}/api",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "354ac765-f3d7-432e-9ad5-5385a725cf03",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b7563ae8-bcf3-48bc-9676-31d39e330c1e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6bd7803e-d410-4426-b67c-32a70669c875",
+			"key": "myUsername-PRD",
+			"value": "***unset***"
+		},
+		{
+			"id": "70c24c6a-d749-48c0-adb0-43479bc3b817",
+			"key": "myUsername-UAT",
+			"value": "***unset***"
+		},
+		{
+			"id": "26a04e18-deab-41c1-8155-78be81e958f7",
+			"key": "myUsername-DEV",
+			"value": "***unset***"
+		},
+		{
+			"id": "7cb3ab9e-5ec9-4795-829e-ad61da457413",
+			"key": "myPassword-PRD",
+			"value": "***unset***"
+		},
+		{
+			"id": "2e587aee-19e4-4e0e-80c7-fa8b08b9155c",
+			"key": "myPassword-UAT",
+			"value": "***unset***"
+		},
+		{
+			"id": "51beeb21-2cdf-4848-86ea-1a8772bca748",
+			"key": "myPassword-DEV",
+			"value": "***unset***"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

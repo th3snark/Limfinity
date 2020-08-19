@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.cbctc.Service.Limfinity", "com.cbctc.Service.Limfinity\com.cbctc.Service.Limfinity.csproj", "{3CE8522E-9D7B-42E5-A15E-A6AC7FEB371D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35B7D838-F252-445F-848A-7611779AA068}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Limfinity API Scripts", "Limfinity API Scripts", "{DF26FDB5-1EEA-44EC-99AE-6EFF377DC156}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\Limfinity API Scripts\ApiScript--GetSampleDispositions.rb = Solution Items\Limfinity API Scripts\ApiScript--GetSampleDispositions.rb
+		Solution Items\Limfinity API Scripts\ApiScript--GetSampleDispositionsWithResults.rb = Solution Items\Limfinity API Scripts\ApiScript--GetSampleDispositionsWithResults.rb
+		Solution Items\Limfinity API Scripts\ApiScript--SetPcrSampleReferences.rb = Solution Items\Limfinity API Scripts\ApiScript--SetPcrSampleReferences.rb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman Exports", "Postman Exports", "{22053D55-525B-4B8C-A278-FC90A5FA347C}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\Postman Exports\Limfinity.postman_collection.json = Solution Items\Postman Exports\Limfinity.postman_collection.json
+		Solution Items\Postman Exports\Limfinity.postman_environment.json = Solution Items\Postman Exports\Limfinity.postman_environment.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CE8522E-9D7B-42E5-A15E-A6AC7FEB371D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE8522E-9D7B-42E5-A15E-A6AC7FEB371D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE8522E-9D7B-42E5-A15E-A6AC7FEB371D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE8522E-9D7B-42E5-A15E-A6AC7FEB371D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF26FDB5-1EEA-44EC-99AE-6EFF377DC156} = {35B7D838-F252-445F-848A-7611779AA068}
+		{22053D55-525B-4B8C-A278-FC90A5FA347C} = {35B7D838-F252-445F-848A-7611779AA068}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E8DDDE2-7200-4CAD-90A9-1C91C6523B8B}
+	EndGlobalSection
+EndGlobal

@@ -11,6 +11,10 @@ An example Limfinity API Service implemented as a .NET Standard Class Library
 
 * **Limfinity API Scripts** contains several example Limfinity scripts that are callable from the Limfinity API. They need to be installed as "Helper Scripts" and the "Enable via API" checkbox should be set on.
 
+### Useful References
+
+* **Limfinity Getting Started and API Guide** can be found here https://ruroinc.github.io/Limfinity7.1-docs/
+
 --  
 Nick Biggs  
 18 Aug 2020
